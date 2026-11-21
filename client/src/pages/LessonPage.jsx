@@ -10,6 +10,7 @@ import { gameBySlug, neighbours } from '../lib/catalog.js';
 import { SKILL_LABELS } from '../lib/constants.js';
 import Markdown from '../components/Markdown.jsx';
 import Sidebar from '../components/Sidebar.jsx';
+import LessonDemo from '../demos/LessonDemo.jsx';
 import NotFoundPage from './NotFoundPage.jsx';
 
 function DrillList({ lesson }) {
@@ -166,8 +167,10 @@ export default function LessonPage() {
           <video src={lesson.clipUrl} autoPlay loop muted playsInline controls aria-label={`Clip: ${lesson.title}`} />
         )}
         <Markdown>{lesson.body}</Markdown>
+        <LessonDemo key={lesson.id} name={lesson.demo} />
         <DrillList lesson={lesson} />
-        <CompleteButton key={lesson.id} lesson={lesson} />
+        {/* Keyed so its state resets per lesson; sibling keys must differ from LessonDemo's. */}
+        <CompleteButton key={`complete-${lesson.id}`} lesson={lesson} />
         <nav className="row row-between" aria-label="Lesson navigation">
           {prev ? (
             <Link className="btn" to={`/games/${game.slug}/${prev.slug}`}>

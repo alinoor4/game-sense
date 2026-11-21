@@ -237,3 +237,19 @@ fieldset.card > label.row { clear: left; padding: 0.3rem 0; }
 /* ---------- scrolling ---------- */
 /* Overrides the smooth scrolling set at the top: Back and Forward restore the position at once instead of animating there. */
 html { scroll-behavior: auto; }
+
+/* ---------- demos ---------- */
+/* A demo's heading starts its box, like a card's. */
+.demo > h2 { margin-top: 0; }
+/* A labelled select beside a button: the button lines up with the select, not with the label above it. */
+.demo-controls { align-items: flex-end; }
+.demo-controls > .field { margin-bottom: 0; min-width: 0; }
+
+/* aim trainer */
+.aim-canvas { cursor: crosshair; }
+
+/* counter-strafe */
+/* Clicking into the box shows no :focus-visible ring, but the player has to see that the box has the keyboard. */
+.strafe-area:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* The strafe buttons are held like keys: a finger that moves a little must not scroll the page or select the label. */
+.strafe-area .btn { touch-action: none; -webkit-user-select: none; user-select: none; }
