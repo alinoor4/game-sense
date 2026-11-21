@@ -20,7 +20,7 @@ This folder is the complete specification. Follow it exactly. Where it describes
 |---|------|-------|------|
 | 0 | `02-starter.md` | Install the starter and learn what it contains | [x] |
 | 1 | `03-content.md` | Write the 30 remaining seed lessons | [x] |
-| 2 | `04-frontend-core.md` | App shell, shared components, auth pages | [ ] |
+| 2 | `04-frontend-core.md` | App shell, shared components, auth pages | [x] |
 | 3 | `04-frontend-core.md` | Home, track page, lesson page, search | [ ] |
 | 4 | `04-frontend-core.md` | Onboarding quiz, dashboard, progress | [ ] |
 | 5 | `05-tools.md` | Sensitivity converter, crosshair generator, routine generator | [ ] |
