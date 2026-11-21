@@ -197,3 +197,21 @@ dialog.palette::backdrop { background: rgba(0, 0, 0, 0.6); }
   /* On narrow screens the header wraps to several rows; let it scroll away instead of covering the page. */
   .site-header { position: static; }
 }
+
+/* ---------- home, track and lesson pages ---------- */
+/* A heading that starts a card needs no top margin, like `.card h3` (the drill card's h2). */
+.card h2 { margin-top: 0; }
+/* When previous and next wrap onto two lines on a phone, "next" stays on the right. */
+article.content > nav.row-between > :last-child { margin-left: auto; }
+/* Console commands in titles, playlist codes and long links wrap instead of overflowing. */
+.layout, .grid { overflow-wrap: break-word; }
+/* break-word cannot make a flex item narrower than its longest word; anywhere can. */
+article.content > nav.row-between a { overflow-wrap: anywhere; }
+/* "Mark as complete" uses aria-disabled while saving so it keeps keyboard focus; it looks like `.btn:disabled`. */
+.btn[aria-disabled='true'] { opacity: 0.5; cursor: not-allowed; }
+@media (max-width: 800px) {
+  /* Plain `1fr` lets the widest table or code line stretch the single column past the screen. */
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  /* A wide lesson table scrolls sideways on its own instead of pushing the page. */
+  .prose table { display: block; overflow-x: auto; }
+}
