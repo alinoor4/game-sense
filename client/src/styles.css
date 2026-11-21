@@ -221,3 +221,7 @@ article.content > nav.row-between a { overflow-wrap: anywhere; }
 fieldset.card > legend { float: left; width: 100%; padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
 /* A long answer wraps beside its radio instead of dropping below it, with room to tap. */
 fieldset.card > label.row { clear: left; flex-wrap: nowrap; align-items: baseline; padding: 0.3rem 0; }
+
+/* ---------- scrolling ---------- */
+/* Overrides the smooth scrolling set at the top: Back and Forward restore the position at once instead of animating there. */
+html { scroll-behavior: auto; }

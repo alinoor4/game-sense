@@ -9,7 +9,7 @@ export default function Layout() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  // A page opened from a link starts at the top ('instant': styles.css turns on smooth scrolling).
+  // A page opened from a link starts at the top ('instant' so it never animates, whatever scroll-behavior is set).
   // On Back and Forward the browser restores the earlier position after this runs.
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
