@@ -1,4 +1,5 @@
-import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import SearchPalette from './SearchPalette.jsx';
 
@@ -6,6 +7,13 @@ import SearchPalette from './SearchPalette.jsx';
 export default function Layout() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  // A page opened from a link starts at the top ('instant': styles.css turns on smooth scrolling).
+  // On Back and Forward the browser restores the earlier position after this runs.
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
 
   async function onLogout() {
     await logout();

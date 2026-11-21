@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useApi } from '../hooks/useApi.js';
 import { useAuth } from '../context/AuthContext.jsx';
@@ -121,11 +121,6 @@ export default function LessonPage() {
   const notFound = error?.status === 404 || (catalog && !game);
   // NotFoundPage sets this title too, but a parent's effect runs after its child's and would overwrite it.
   usePageTitle(notFound ? 'Page not found' : data?.lesson.title);
-
-  useEffect(() => {
-    // styles.css turns on smooth scrolling; a new lesson should start at the top at once.
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [lessonSlug]);
 
   // Between lessons the previous one stays up until the next arrives, so the sidebar keeps its scroll position.
   if (catalogLoading || (loading && !data)) return <p className="container muted">Loading…</p>;

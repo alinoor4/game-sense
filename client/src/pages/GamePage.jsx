@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { Fragment } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useCatalog } from '../context/CatalogContext.jsx';
@@ -15,11 +15,6 @@ export default function GamePage() {
   const game = catalog ? gameBySlug(catalog, gameSlug) : null;
   // NotFoundPage sets this title too, but a parent's effect runs after its child's and would overwrite it.
   usePageTitle(catalog && !game ? 'Page not found' : game?.name);
-
-  useEffect(() => {
-    // Links to a track can sit far down a page; the track should open at its top, without a smooth scroll.
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [gameSlug]);
 
   if (loading) return <p className="container muted">Loading…</p>;
   if (error) {
