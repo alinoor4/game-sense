@@ -6,6 +6,8 @@ import GamePage from './pages/GamePage.jsx';
 import LessonPage from './pages/LessonPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
+import OnboardingPage from './pages/OnboardingPage.jsx';
+import DashboardPage from './pages/DashboardPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 
 export default function App() {
@@ -17,7 +19,10 @@ export default function App() {
         <Route path="/games/:gameSlug/:lessonSlug" element={<LessonPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route element={<RequireAuth />} />
+        <Route element={<RequireAuth />}>
+          <Route path="/onboarding" element={<OnboardingPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

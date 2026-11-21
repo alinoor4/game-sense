@@ -22,7 +22,7 @@ This folder is the complete specification. Follow it exactly. Where it describes
 | 1 | `03-content.md` | Write the 30 remaining seed lessons | [x] |
 | 2 | `04-frontend-core.md` | App shell, shared components, auth pages | [x] |
 | 3 | `04-frontend-core.md` | Home, track page, lesson page, search | [x] |
-| 4 | `04-frontend-core.md` | Onboarding quiz, dashboard, progress | [ ] |
+| 4 | `04-frontend-core.md` | Onboarding quiz, dashboard, progress | [x] |
 | 5 | `05-tools.md` | Sensitivity converter, crosshair generator, routine generator | [ ] |
 | 6 | `05-tools.md` | Canvas demos: aim trainer, peek advantage, counter-strafe, crosshair comparison | [ ] |
 | 7 | `05-tools.md` | Lineup maps | [ ] |
