@@ -187,3 +187,13 @@ dialog.palette::backdrop { background: rgba(0, 0, 0, 0.6); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* ---------- header and form fixes (worst-case data) ---------- */
+/* A name can be 50 characters with no spaces; let it wrap instead of pushing the page sideways. */
+.site-header > .muted { overflow-wrap: anywhere; }
+/* `.field > span` is muted and outranks `.error-text`, which made field errors look like hints. */
+.field > .error-text { color: var(--danger); }
+@media (max-width: 800px) {
+  /* On narrow screens the header wraps to several rows; let it scroll away instead of covering the page. */
+  .site-header { position: static; }
+}
