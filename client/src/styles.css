@@ -216,11 +216,23 @@ article.content > nav.row-between a { overflow-wrap: anywhere; }
   .prose table { display: block; overflow-x: auto; }
 }
 
+/* ---------- checkbox and radio labels ---------- */
+/* A long label wraps beside its checkbox or radio instead of dropping below it. */
+label.row { flex-wrap: nowrap; align-items: baseline; }
+
 /* ---------- onboarding ---------- */
 /* Each question's legend sits inside its card instead of on the card's top border. */
 fieldset.card > legend { float: left; width: 100%; padding: 0; margin-bottom: 0.5rem; font-weight: 600; }
-/* A long answer wraps beside its radio instead of dropping below it, with room to tap. */
-fieldset.card > label.row { clear: left; flex-wrap: nowrap; align-items: baseline; padding: 0.3rem 0; }
+/* Answers start below the legend, each with room to tap. */
+fieldset.card > label.row { clear: left; padding: 0.3rem 0; }
+
+/* ---------- tools ---------- */
+/* Checkboxes, radios and sliders use the site's one accent colour instead of the browser's blue. */
+:root { accent-color: var(--accent); }
+/* The field padding squeezed the colour picker's swatch to a dot. */
+.field input[type='color'] { width: 4rem; height: 2.5rem; padding: 0.2rem; }
+/* Full-width sliders are easier to drag precisely, especially by touch. */
+.field input[type='range'] { width: 100%; }
 
 /* ---------- scrolling ---------- */
 /* Overrides the smooth scrolling set at the top: Back and Forward restore the position at once instead of animating there. */
