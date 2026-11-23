@@ -1,0 +1,43 @@
+// The four seed tracks. `sections` are titles in display order; lesson files refer to them by title.
+export const games = [
+  {
+    name: 'FPS Fundamentals',
+    slug: 'fps-fundamentals',
+    description: 'Skills every shooter rewards, whatever you play: setup, aim, movement, positioning and the mental game.',
+    genre: 'fps',
+    isFundamentals: true,
+    order: 1,
+    ranks: ['Beginner', 'Intermediate', 'Advanced', 'Semi-pro'],
+    sections: ['Hardware & Setup', 'Micro-Mechanics', 'Macro & Game Sense', 'Mental & VOD Review'],
+  },
+  {
+    name: 'Valorant',
+    slug: 'valorant',
+    description: 'Tactical shooter with agents and abilities. Gunplay habits and utility thinking on top of the fundamentals.',
+    genre: 'fps',
+    isFundamentals: false,
+    order: 2,
+    ranks: ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Ascendant', 'Immortal', 'Radiant'],
+    sections: ['Gunplay', 'Agents & Utility'],
+  },
+  {
+    name: 'Counter-Strike 2',
+    slug: 'cs2',
+    description: 'The classic tactical shooter. Spray control, utility and a practice setup you can copy and paste.',
+    genre: 'fps',
+    isFundamentals: false,
+    order: 3,
+    ranks: ['Silver', 'Gold Nova', 'Master Guardian', 'Legendary Eagle', 'Supreme', 'Global Elite'],
+    sections: ['Weapons & Spray', 'Utility', 'Config & Practice'],
+  },
+  {
+    name: 'Fighting Game Fundamentals',
+    slug: 'fighting-fundamentals',
+    description: 'The shared language of fighting games: frame data, combos, neutral and pressure.',
+    genre: 'fighting',
+    isFundamentals: true,
+    order: 4,
+    ranks: ['Beginner', 'Intermediate', 'Advanced', 'Tournament'],
+    sections: ['Core Concepts'],
+  },
+];
