@@ -4,9 +4,6 @@ Game Sense is a "W3Schools for gamers": short, structured lessons that teach how
 
 Built on the MERN stack (MongoDB, Express, React, Node.js) for a university Web Technologies course.
 
-> [!NOTE]
-> **Work in progress.** Lessons, accounts, the dashboard, all tools, the lineup maps and the admin panel are done. Running it as a single production server is still being finished. See [plan/plan.md](plan/plan.md) for the phase-by-phase status.
-
 ## Features
 
 **Visitors**
@@ -43,7 +40,7 @@ Built on the MERN stack (MongoDB, Express, React, Node.js) for a university Web 
 - **Passwords:** hashed with bcrypt; the hash is never sent to the browser.
 - **Lessons:** Markdown rendered by react-markdown without raw HTML, so lesson text cannot inject scripts.
 
-## Getting started
+## Run it locally
 
 ### Prerequisites
 

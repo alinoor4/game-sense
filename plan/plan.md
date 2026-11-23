@@ -27,7 +27,7 @@ This folder is the complete specification. Follow it exactly. Where it describes
 | 6 | `05-tools.md` | Canvas demos: aim trainer, peek advantage, counter-strafe, crosshair comparison | [x] |
 | 7 | `05-tools.md` | Lineup maps | [x] |
 | 8 | `06-admin.md` | Admin panel | [x] |
-| 9 | `07-finish.md` | Production mode, README, final checks | [ ] |
+| 9 | `07-finish.md` | Production mode, README, final checks | [x] |
 
 ## Fixed technology choices
 
