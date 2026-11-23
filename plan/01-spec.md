@@ -31,7 +31,7 @@ The finished project looks exactly like this. Lines marked `S` come ready-made f
 
 ```
 Game Sense/
-├─ plan/                      (this plan; never edit except ticking phases in README.md)
+├─ plan/                      (this plan; never edit except ticking phases in plan.md)
 ├─ package.json               S (root: lint + helper scripts)
 ├─ eslint.config.js           S
 ├─ .gitignore                 S

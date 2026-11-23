@@ -25,7 +25,7 @@ This folder is the complete specification. Follow it exactly. Where it describes
 | 4 | `04-frontend-core.md` | Onboarding quiz, dashboard, progress | [x] |
 | 5 | `05-tools.md` | Sensitivity converter, crosshair generator, routine generator | [x] |
 | 6 | `05-tools.md` | Canvas demos: aim trainer, peek advantage, counter-strafe, crosshair comparison | [x] |
-| 7 | `05-tools.md` | Lineup maps | [ ] |
+| 7 | `05-tools.md` | Lineup maps | [x] |
 | 8 | `06-admin.md` | Admin panel | [ ] |
 | 9 | `07-finish.md` | Production mode, README, final checks | [ ] |
 

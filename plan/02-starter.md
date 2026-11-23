@@ -21,11 +21,11 @@ Goal: the project folder contains the starter, everything installs, `npm run che
 
 6. **Run the full check.** From the project root: `npm run check`.
    - Expect: ESLint prints nothing; server tests report `pass 17`, `fail 0`; client tests report `pass 25`, `fail 0`; Vite prints `✓ built`.
-   - First run only: it may sit silent for 10 to 15 minutes while MongoDB downloads (see README, "Things that will surprise you"). Wait.
+   - First run only: it may sit silent for 10 to 15 minutes while MongoDB downloads (see `plan.md`, "Things that will surprise you"). Wait.
 
 7. **Seed and look at it.**
    1. `npm run seed`. Expect: `Seeded 4 games, 3 lessons, 1 maps.` and the two demo accounts.
-   2. Start the API: `npm --prefix server run dev`. Expect: `API listening on http://127.0.0.1:5000`. (If it says the port is reserved or in use, follow the README: change `PORT` in `server/.env`.)
+   2. Start the API: `npm --prefix server run dev`. Expect: `API listening on http://127.0.0.1:5000`. (If it says the port is reserved or in use, follow `plan.md`: change `PORT` in `server/.env`.)
    3. Start the website in a second terminal: `npm --prefix client run dev`.
    4. Read the address the website command printed (`Local: http://127.0.0.1:<port>/`; on this machine usually port 3000) and open it. This is "the site address" from now on. Expect the site header (GameSense, Tracks, Tools, Search, Log in, Sign up) and a page headed "Game Sense starter" with a green box: `Catalog loaded: 4 games, 3 lessons, 1 maps.`, plus two keyboard keys and a code block with a Copy button. Press Ctrl+K: the search palette opens; typing `strafe` lists "Counter-Strafing".
    5. Open `<site address>/api/catalog`. Expect JSON with `games`, `lessons`, `maps`. (This also proves the website forwards `/api` to the API.)
