@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import RequireAuth from './components/RequireAuth.jsx';
+import RequireAdmin from './components/RequireAdmin.jsx';
 import HomePage from './pages/HomePage.jsx';
 import GamePage from './pages/GamePage.jsx';
 import LessonPage from './pages/LessonPage.jsx';
@@ -16,6 +17,13 @@ import RegisterPage from './pages/RegisterPage.jsx';
 import OnboardingPage from './pages/OnboardingPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
+import AdminLessonsPage from './pages/admin/AdminLessonsPage.jsx';
+import AdminLessonEditPage from './pages/admin/AdminLessonEditPage.jsx';
+import AdminGamesPage from './pages/admin/AdminGamesPage.jsx';
+import AdminGameEditPage from './pages/admin/AdminGameEditPage.jsx';
+import AdminMapsPage from './pages/admin/AdminMapsPage.jsx';
+import AdminMapEditPage from './pages/admin/AdminMapEditPage.jsx';
+import AdminUsersPage from './pages/admin/AdminUsersPage.jsx';
 
 export default function App() {
   return (
@@ -36,6 +44,18 @@ export default function App() {
         <Route element={<RequireAuth />}>
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+        </Route>
+        <Route element={<RequireAdmin />}>
+          <Route path="/admin" element={<AdminLessonsPage />} />
+          <Route path="/admin/lessons/new" element={<AdminLessonEditPage />} />
+          <Route path="/admin/lessons/:id" element={<AdminLessonEditPage />} />
+          <Route path="/admin/games" element={<AdminGamesPage />} />
+          <Route path="/admin/games/new" element={<AdminGameEditPage />} />
+          <Route path="/admin/games/:id" element={<AdminGameEditPage />} />
+          <Route path="/admin/maps" element={<AdminMapsPage />} />
+          <Route path="/admin/maps/new" element={<AdminMapEditPage />} />
+          <Route path="/admin/maps/:id" element={<AdminMapEditPage />} />
+          <Route path="/admin/users" element={<AdminUsersPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Route>
