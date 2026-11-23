@@ -16,7 +16,6 @@ import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import OnboardingPage from './pages/OnboardingPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
-import NotFoundPage from './pages/NotFoundPage.jsx';
 import AdminLessonsPage from './pages/admin/AdminLessonsPage.jsx';
 import AdminLessonEditPage from './pages/admin/AdminLessonEditPage.jsx';
 import AdminGamesPage from './pages/admin/AdminGamesPage.jsx';
@@ -24,6 +23,7 @@ import AdminGameEditPage from './pages/admin/AdminGameEditPage.jsx';
 import AdminMapsPage from './pages/admin/AdminMapsPage.jsx';
 import AdminMapEditPage from './pages/admin/AdminMapEditPage.jsx';
 import AdminUsersPage from './pages/admin/AdminUsersPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 
 export default function App() {
   return (
