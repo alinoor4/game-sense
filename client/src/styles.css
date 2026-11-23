@@ -253,3 +253,9 @@ html { scroll-behavior: auto; }
 .strafe-area:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
 /* The strafe buttons are held like keys: a finger that moves a little must not scroll the page or select the label. */
 .strafe-area .btn { touch-action: none; -webkit-user-select: none; user-select: none; }
+
+/* ---------- admin ---------- */
+/* `.grid` fills a row with narrow columns; the Markdown editor wants exactly two, side by side when there is room. */
+.admin-split { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+/* A text input in a row of buttons takes the free space instead of a full line of its own. */
+.admin-row-input { flex: 1; width: auto; min-width: 10rem; }

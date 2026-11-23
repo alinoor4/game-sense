@@ -26,13 +26,13 @@ Write it for a lecturer who has never seen the project. Plain language, these se
 
 1. **Game Sense** — two sentences on what it is.
 2. **Features** — a bullet list grouped as Visitors, Registered users, Admins (take them from `01-spec.md` section 1).
-3. **Tech stack** — the table from `plan/README.md`, plus one line each on: JWT in an httpOnly cookie, bcrypt password hashing, Markdown lessons rendered without raw HTML.
+3. **Tech stack** — the table from `plan/plan.md`, plus one line each on: JWT in an httpOnly cookie, bcrypt password hashing, Markdown lessons rendered without raw HTML.
 4. **Run it locally** — the exact commands: `npm run install:all`, copy `server/.env.example` to `server/.env`, `npm run seed`, the two dev commands, the URL. Include the warning about the one-time 780 MB MongoDB download and that no MongoDB installation is needed.
 5. **Demo accounts** — the table of the two seeded accounts, with the sentence `These are for local demonstration only. Change or delete them before putting the site online.`
 6. **Tests** — `npm run check` and what it covers (API tests for auth, content, profile, progress and admin; unit tests for the tool maths).
 7. **Project structure** — the tree from `01-spec.md` section 2, shortened to two levels.
 8. **API overview** — one table: method, path, access (public / user / admin), purpose. Take it from `01-spec.md` section 5.
-9. **Known limits** — copy the "deliberately not in this project" list from `plan/README.md`, and add: lesson facts are general guidance and may not match the current patch of a game; the Training Yard map is fictional; the crosshair conversion to CS2 units is approximate.
+9. **Known limits** — copy the "deliberately not in this project" list from `plan/plan.md`, and add: lesson facts are general guidance and may not match the current patch of a game; the Training Yard map is fictional; the crosshair conversion to CS2 units is approximate.
 10. **Credits** — `Built for the Web Technologies course. Not affiliated with or endorsed by any game publisher. Game names are trademarks of their owners.`
 
 Do not include screenshots, badges or emoji.
@@ -80,5 +80,5 @@ Commit `phase 9: readme and final checks`.
 
 - [ ] All eleven sweep checks pass.
 - [ ] `README.md` exists in the project root with the ten sections.
-- [ ] All ten phases are ticked in `plan/README.md`.
+- [ ] All ten phases are ticked in `plan/plan.md`.
 - [ ] The final report is written.
