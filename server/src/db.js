@@ -30,6 +30,8 @@ export async function connectDb() {
 }
 
 export async function disconnectDb() {
+  // On Windows stop() kills mongod at once, which drops writes from the last ~100 ms (the seed lost its last account); flush them to disk first.
+  if (memoryServer) await mongoose.connection.db.admin().command({ fsync: 1 });
   await mongoose.disconnect();
   if (memoryServer) {
     await memoryServer.stop();
