@@ -9,6 +9,8 @@ import SensitivityPage from './pages/SensitivityPage.jsx';
 import CrosshairPage from './pages/CrosshairPage.jsx';
 import AimTrainerPage from './pages/AimTrainerPage.jsx';
 import RoutinePage from './pages/RoutinePage.jsx';
+import LineupsPage from './pages/LineupsPage.jsx';
+import LineupMapPage from './pages/LineupMapPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import OnboardingPage from './pages/OnboardingPage.jsx';
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/tools/crosshair" element={<CrosshairPage />} />
         <Route path="/tools/aim-trainer" element={<AimTrainerPage />} />
         <Route path="/tools/routine" element={<RoutinePage />} />
+        <Route path="/tools/lineups" element={<LineupsPage />} />
+        <Route path="/tools/lineups/:mapSlug" element={<LineupMapPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route element={<RequireAuth />}>
